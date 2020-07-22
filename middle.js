@@ -44,6 +44,17 @@ const middle = function(arr) {
   return middleArr;
 }
 
+const assertMiddle = function(arr, num) {
+  if (middle(arr) !== num) {
+    console.log(`🛑🛑🛑 Assertion Failed: middle of [${arr}] !== [${num}]`);
+    return;
+  }
+  else {
+    console.log(`✅✅✅ Assertion Passed: middle of [${arr}] equals [${num}]`);
+  return;
+  }
+}
+
 
 
 assertArraysEqual(middle([1, 2, 4, 5, 7]), middle ([2, 2, 4 ,90, 1000]));
