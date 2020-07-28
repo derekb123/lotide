@@ -1,33 +1,32 @@
-const eqArrays = function(arr1, arr2) {
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1.length !== arr2.length) {
-      return false;
-    }
-    else {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
+// const eqArrays = function(arr1, arr2) {
+//   for (i = 0; i < arr1.length; i++) {
+//     if (arr1.length !== arr2.length) {
+//       return false;
+//     }
+//     else {
+//       if (arr1[i] !== arr2[i]) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// };
 
-const assertArraysEqual = function(arr1, arr2) {
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1.length !== arr2.length) {
-      console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] equals [${arr2}]`);
-      return;
-    }
-    else {
-      if (arr1[i] !== arr2[i]) {
-        console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] equals [${arr2}]`);
-        return;
-      }
-    }
-  }
-  console.log(`✅✅✅ Assertion Passed: [${arr1}] equals [${arr2}]`);
-  return;
-};
+// // const assertArraysEqual = function(arr1, arr2) {
+// //   for (i = 0; i < arr1.length; i++) {
+// //     if (arr1.length !== arr2.length) {
+// //       console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] equals [${arr2}]`);
+// //       return;
+// //     }
+// //     else if (arr1[i] !== arr2[i]) {
+// //       console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] equals [${arr2}]`);
+// //       return;
+// //     }
+// //   }
+// //   console.log(`✅✅✅ Assertion Passed: [${arr1}] equals [${arr2}]`);
+// //   return;
+// // }z
+
 
 
 const middle = function(arr) {
@@ -36,32 +35,23 @@ const middle = function(arr) {
     return [];
   }
   else if (arr.length % 2 === 0) {
-    middleArr.push(arr.length/2, (arr.length/2) - 1);
+    middleArr.push(arr[(arr.length/2) - 1], arr[arr.length/2]);
   }
   else {
-    middleArr.push(Math.floor(arr.length/2));
+    middleArr.push(arr[Math.floor(arr.length/2)]);
   }
   return middleArr;
 }
 
-const assertMiddle = function(arr, num) {
-  if (middle(arr) !== num) {
-    console.log(`🛑🛑🛑 Assertion Failed: middle of [${arr}] !== [${num}]`);
-    return;
-  }
-  else {
-    console.log(`✅✅✅ Assertion Passed: middle of [${arr}] equals [${num}]`);
-  return;
-  }
-}
+module.exports = middle;
 
 
 
-assertArraysEqual(middle([1, 2, 4, 5, 7]), middle ([2, 2, 4 ,90, 1000]));
 
-// console.log(middle([1])) // => []
-// console.log(middle([1, 2])) // => []
-// console.log(middle([1, 2, 3])) // => [2]
-// console.log(middle([1, 2, 3, 4, 5])) // => [3]
-// console.log(middle([1, 2, 3, 4])) // => [2, 3]
-// console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
+
+console.log(middle([1])) // => []
+console.log(middle([1, 2])) // => []
+console.log(middle([1, 2, 3])) // => [2]
+console.log(middle([1, 2, 3, 4, 5])) // => [3]
+console.log(middle([1, 2, 3, 4])) // => [2, 3]
+console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
