@@ -4,7 +4,7 @@ const assert = require('chai').assert;
 
 describe('#tailTest', () => {
   it('tail of [4,5,6,7] = [5,6,7]', () => {
-    assert.strictEqual(assertArraysEqual(tail([4,5,6,7]), [5,6,7]));
+    assert.deepEqual(tail([4,5,6,7]), [5,6,7]);
   });
 });
 
