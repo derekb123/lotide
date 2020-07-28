@@ -15,6 +15,8 @@ const assertArraysEqual = function(arr1, arr2) {
   return;
 };
 
+
+
 const eqArrays = function(arr1, arr2) {
   for (i = 0; i < arr1.length; i++) {
     if (arr1.length !== arr2.length) {
@@ -44,6 +46,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 // console.log(letterPositions("lighthouse in the house"));
 
-assertArraysEqual(letterPositions('hello').e, [1]);
+// assertArraysEqual(letterPositions('hello').e, [1]);

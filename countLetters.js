@@ -21,7 +21,9 @@ const countLetters = function(str) {
   return countObj;
 }
 
-assertEqual(countLetters('fluff').f, 3);
-assertEqual(countLetters('aardvark').a, 3);
+// assertEqual(countLetters('fluff').f, 3);
+// assertEqual(countLetters('aardvark').a, 3);
 
-console.log(countLetters('abracadabra'));
+// console.log(countLetters('abracadabra'));
+
+module.exports = countLetters;

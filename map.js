@@ -30,6 +30,8 @@ const assertArraysEqual = function(arr1, arr2) {
   return;
 };
 
+
+
 const words = ["ground", "control", "to", "major", "tom"];
 const nums = [1,2,3,4,5];
 const floats = [1.5,2.7,3.9,4.4,5.6];
@@ -42,13 +44,15 @@ const map = function(array, callback) {
   return results;
 }
 
-const results1 = map(words, word => word[0]);
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
+module.exports = map;
 
-const results2 = map(nums, num => num + 1);
-assertArraysEqual(results2, [2,3,4,5,6]);
+// const results1 = map(words, word => word[0]);
+// assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 
-const results3 = map(floats, float => Math.floor(float));
-assertArraysEqual(results3, [1,2,3,4,5]);
+// const results2 = map(nums, num => num + 1);
+// assertArraysEqual(results2, [2,3,4,5,6]);
+
+// const results3 = map(floats, float => Math.floor(float));
+// assertArraysEqual(results3, [1,2,3,4,5]);
 
 
